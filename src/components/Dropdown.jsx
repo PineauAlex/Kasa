@@ -9,7 +9,7 @@ const DropdownBase = styled.div`
     border-radius: 10px;
 `
 
-const DropdownArrow = styled.div`
+const DropdownArrow = styled.img`
     position: absolute;
     left: 92.96%;
     right: 1.55%;

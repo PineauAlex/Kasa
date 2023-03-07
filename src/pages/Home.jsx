@@ -1,13 +1,12 @@
-import Tag from '../components/Tag';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Card from '../components/Card';
-import Dropdown from '../components/Dropdown';
 
 function Home() {
   return (<>
-    <h1>Home</h1>
-    <Tag />
-    <Card />
-    <Dropdown />
+    <Header />
+    {/*<Card />
+    <Footer />*/}
   </>);
 }
 

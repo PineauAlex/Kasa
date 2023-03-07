@@ -9,7 +9,7 @@ const TagBackground = styled.div`
     border-radius: 10px;
 `
 
-const TagText = styled.div`
+const TagText = styled.h3`
     position: absolute;
     left: 19.13%;
     right: 19.13%;

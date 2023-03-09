@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import LogoK from '../assets/Logo_Orange.png';
+import LogoK from '../assets/logo_blanc.png';
 
 const FooterBackground = styled.div`
     display: flex;

@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 const logementsList = require('../datas/logements.json');
 
-const CardImage = styled.img`
-    position: absolute;
+const CardImage = styled.div`
     width: 340px;
     height: 340px;
 
@@ -13,6 +12,9 @@ const CardImage = styled.img`
 
 const CardShadow = styled.div`
     position: absolute;
+    width: 340px;
+    height: 340px;
+    
     left: 0%;
     right: 0%;
     top: 0%;
@@ -44,19 +46,17 @@ const CardText = styled.h3`
 function Card() {
     return (
         <>
-        {logementsList.map((logement) => (
+        {/* {logementsList.map((logement) => (
             <>
-            <CardImage src={logement.cover} key={logement.id} />
-                
-            <div>
-                <CardShadow>            
-                    <CardText>
-                        {logement.title}
-                    </CardText>
-                </CardShadow>
-            </div>
+            <CardImage key={logement.id}>
+                <img src={logement.cover} />
+                <CardShadow />
+                <CardText>
+                    {logement.title}
+                <CardText />
+            <CardImage />
             </>
-        ))}
+        ))} */}
         </>
     );
 }

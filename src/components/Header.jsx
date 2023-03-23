@@ -19,7 +19,7 @@ const HeaderLogo = styled.img`
 
 const HeaderLinks = styled(Link)`
     font-size: 12px;
-    padding-right: 20px;
+    padding-left: 20px;
     color: #FF6060;
 `
 

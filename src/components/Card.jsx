@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import CardExample from './CardExample';
+
 const logementsList = require('../datas/logements.json');
 
 const CardImage = styled.div`
@@ -34,15 +36,18 @@ const CardText = styled.h3`
     line-height: 142.6%;
     display: flex;
     align-items: flex-end;
-    color: #FFFFFF;
+    color: black;
 `
 
 function Card() {
     return (
-        /*
         <>
-        {logementsList.map((logement) => {
+        {logementsList.map((logement) => (
             <>
+            <CardExample>
+                <CardText key={logement.id}>{logement.title}</CardText>
+            </CardExample>
+            {/*
             <CardImage key={logement.id}>
                 <img src={logement.cover} />
                 <CardShadow />
@@ -50,11 +55,10 @@ function Card() {
                     {logement.title}
                 <CardText />
             <CardImage />
+            */}
             </>
-        })}
+        ))}
         </>
-        */
-        <></>
     );
 }
 

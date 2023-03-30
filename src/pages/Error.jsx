@@ -1,7 +1,16 @@
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+import ErrorMessage from '../components/ErrorMessage';
+
 function Error() {
-  return (
-    <h1>404</h1>
-  );
+  return (<>
+    <div className='body-content'>
+      <Header />
+      <ErrorMessage />
+    </div>
+    <Footer />
+  </>);
 }
 
 export default Error;

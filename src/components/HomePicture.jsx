@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import ImgBackground from '../assets/welcome.jpg';
 
-const WelcomeMain = styled.div`
+const HomePictureMain = styled.div`
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -11,19 +11,19 @@ const WelcomeMain = styled.div`
 
     width: auto;
     height: 111px;
-    margin: 20px;
+    margin: 20px 0;
     border-radius: 10px;
 
     overflow: hidden;
 `
-const WelcomeImg = styled.img`
+const HomePictureImg = styled.img`
     width: 100%;
     height: 111px;
 
     object-fit: cover;
 `
 
-const WelcomeImgEffect = styled.div`
+const HomePictureEffect = styled.div`
     position: absolute;
     width: 100%;
     height: 111px;
@@ -33,7 +33,7 @@ const WelcomeImgEffect = styled.div`
     opacity: 0.3;
 `
 
-const WelcomeText = styled.h2`
+const HomePictureText = styled.h2`
     position: absolute;
     z-index: 10;
     max-width: 217px;
@@ -43,14 +43,14 @@ const WelcomeText = styled.h2`
     color: white;
 `
 
-function HomeWelcome() {
+function HomePicture() {
     return (
-        <WelcomeMain>
-            <WelcomeImg src={ImgBackground} />
-            <WelcomeImgEffect />
-            <WelcomeText>Chez vous, partout et ailleurs</WelcomeText>
-        </WelcomeMain>
+        <HomePictureMain>
+            <HomePictureImg src={ImgBackground} />
+            <HomePictureEffect />
+            <HomePictureText>Chez vous, partout et ailleurs</HomePictureText>
+        </HomePictureMain>
     );
 }
 
-export default HomeWelcome;
+export default HomePicture;

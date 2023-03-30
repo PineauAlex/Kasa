@@ -9,7 +9,6 @@ const HeaderMain = styled.div`
     align-items: center;
     width: auto;
     height: 47px;
-    padding: 20px;
     background-color: white;
 `
 

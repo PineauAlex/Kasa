@@ -11,7 +11,7 @@ const AboutPictureMain = styled.div`
 
     width: auto;
     height: 223px;
-    margin: 20px;
+    margin: 20px 0;
     border-radius: 10px;
 
     overflow: hidden;

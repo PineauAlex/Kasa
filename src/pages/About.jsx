@@ -6,12 +6,14 @@ import Dropdown from '../components/Dropdown';
 
 function About() {
   return (<>
-    <Header />
-    <AboutPicture />
-    <Dropdown />
-    <Dropdown />
-    <Dropdown />
-    <Dropdown />
+    <div className='body-content'>
+      <Header />
+      <AboutPicture />
+      <Dropdown />
+      <Dropdown />
+      <Dropdown />
+      <Dropdown />
+    </div>
     <Footer />
   </>);
 }

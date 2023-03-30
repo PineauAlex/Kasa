@@ -5,7 +5,7 @@ import ArrowDown from '../assets/dropdown_arrow_close.png';
 const DropdownBase = styled.div`
     width: auto;
     height: 30px;
-    margin: 20px;
+    margin: 20px 0;
 
     position: relative;
     display: flex;

@@ -10,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
     h2 {
         font-weight: normal;
     }
+
+    .body-content {
+        padding: 20px;
+    }
 `
 
 export default GlobalStyle;

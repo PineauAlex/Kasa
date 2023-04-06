@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import ArrowDown from '../assets/dropdown_arrow_open.png';
+import Arrow from '../assets/dropdown_arrow_open.png';
 
 const DropdownHead = styled.div`
     width: auto;
@@ -26,42 +26,44 @@ const DropdownHeadTitle = styled.h3`
 
 const DropdownHeadArrow = styled.img`
     height: 8px;
-    padding-right: 10px;
+    ${props => props.open ? `transform: rotate(180deg); padding-left: 10px;` : `transform: rotate(0); padding-right: 10px;`}
+    transition: all 0.5s ease-out;
 `
 
 const DropdownTextBackground = styled.div`
-    margin-top: 0px;
-    border-radius: 10px;
-    margin-top: -20px;
-    height: 140px;
     background: #F6F6F6;
-    display: ${props => props.open};
+    border-radius: 10px;
+    ${props => props.open ? "margin-top: -20px; height: 140px;" : "margin-top: 0; height: 0;"}
+    transition: all 0.5s ease-out;
 `
 
 const DropdownText = styled.p`
     font-size: 12px;
     font-weight: 300;
     margin: 0;
-    padding: 35px 10px 0 10px;
+    padding: ${props => props.open ? "35px" : "0"} 10px 0 10px;
     color: #FF6060;
+    ${props => props.open ? "opacity: 1;" : "opacity: 0;"}
+    transition: all 0.5s ease-out;
 `
 
-function Dropdown() {
+function Dropdown({ title, text }) {
 
-    const [isOpen, setIsOpen] = useState("none");
+    const [isOpen, setIsOpen] = useState(false);
+
     function handleClick(event) {
         event.preventDefault();
-        isOpen === "none" ? setIsOpen("block") : setIsOpen("none");
+        isOpen === false ? setIsOpen(true) : setIsOpen(false);
     }
 
     return (
         <>
             <DropdownHead onClick={handleClick}>
-                <DropdownHeadTitle>Fiabilité</DropdownHeadTitle>
-                <DropdownHeadArrow src={ArrowDown} />
+                <DropdownHeadTitle>{title}</DropdownHeadTitle>
+                <DropdownHeadArrow src={Arrow} open={isOpen} />
             </DropdownHead>
             <DropdownTextBackground open={isOpen}>
-                <DropdownText>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</DropdownText>
+                <DropdownText open={isOpen}>{text}</DropdownText>
             </DropdownTextBackground>
         </>
     );

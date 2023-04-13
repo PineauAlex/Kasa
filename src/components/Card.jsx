@@ -1,20 +1,25 @@
 import styled from 'styled-components';
 
-import CardExample from './CardExample';
-
-const logementsList = require('../datas/logements.json');
-
-const CardImage = styled.div`
-    width: 340px;
-    height: 340px;
+const CardMain = styled.div`
+    position: relative;
+    display: flex;
+    width: 335px;
+    height: 255px;
     background: #FF6060;
+    border-radius: 10px;
+    margin-bottom: 20px;
+`
+
+const CardImage = styled.img`
+    width: 335px;
+    height: 255px;
     border-radius: 10px;
 `
 
 const CardShadow = styled.div`
     position: absolute;
-    width: 340px;
-    height: 340px;
+    width: 335px;
+    height: 255px;
     left: 0%;
     right: 0%;
     top: 0%;
@@ -25,39 +30,26 @@ const CardShadow = styled.div`
 
 const CardText = styled.h3`
     position: absolute;
-    left: 5.88%;
-    right: 5.88%;
-    top: 78.82%;
-    bottom: 5.88%;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
+    left: 5%;
+    right: 5%;
+    top: 85%;
+    bottom: 5%;
+    font-weight: normal;
     font-size: 18px;
     line-height: 142.6%;
     display: flex;
     align-items: flex-end;
-    color: black;
+    color: white;
 `
 
-function Card() {
+function Card({ title, image }) {
     return (
         <>
-        {logementsList.map((logement) => (
-            <>
-            <CardExample>
-                <CardText key={logement.id}>{logement.title}</CardText>
-            </CardExample>
-            {/*
-            <CardImage key={logement.id}>
-                <img src={logement.cover} />
+            <CardMain>
+                <CardImage src={image} />
                 <CardShadow />
-                <CardText>
-                    {logement.title}
-                <CardText />
-            <CardImage />
-            */}
-            </>
-        ))}
+                <CardText>{title}</CardText>
+            </CardMain>
         </>
     );
 }

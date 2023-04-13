@@ -12,6 +12,7 @@ const FooterBackground = styled.div`
     width: 100%;
     height: 209px;
     background: black;
+    margin-top: 50px;
 `
 const FooterLogo = styled.img`
     width: 122px;

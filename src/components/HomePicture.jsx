@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import ImgBackground from '../assets/welcome.jpg';
+import ImgBackground from '../assets/homePicture.jpg';
 
 const HomePictureMain = styled.div`
     position: relative;

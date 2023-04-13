@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const CardMain = styled.div`
     position: relative;
     display: flex;
-    width: 335px;
+    width: auto;
     height: 255px;
     background: #FF6060;
     border-radius: 10px;
@@ -11,14 +11,15 @@ const CardMain = styled.div`
 `
 
 const CardImage = styled.img`
-    width: 335px;
+    width: 100%;
     height: 255px;
+    object-fit: cover;
     border-radius: 10px;
 `
 
 const CardShadow = styled.div`
     position: absolute;
-    width: 335px;
+    width: auto;
     height: 255px;
     left: 0%;
     right: 0%;

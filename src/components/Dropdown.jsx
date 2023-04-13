@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import Arrow from '../assets/dropdown_arrow_open.png';
+import Arrow from '../assets/arrow.png';
 
 const DropdownHead = styled.div`
     width: auto;

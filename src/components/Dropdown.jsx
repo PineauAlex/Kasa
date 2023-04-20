@@ -47,6 +47,17 @@ const DropdownText = styled.p`
     transition: all 0.5s ease-out;
 `
 
+const DropdownList = styled.li`
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0;
+    padding: ${props => props.open ? "35px" : "0"} 10px 0 10px;
+    color: #FF6060;
+    ${props => props.open ? "opacity: 1;" : "opacity: 0;"}
+    transition: all 0.5s ease-out;
+`
+
+
 function Dropdown({ title, text }) {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +74,13 @@ function Dropdown({ title, text }) {
                 <DropdownHeadArrow src={Arrow} open={isOpen} />
             </DropdownHead>
             <DropdownTextBackground open={isOpen}>
-                <DropdownText open={isOpen}>{text}</DropdownText>
+                { Array.isArray(text) ?
+                <ul>
+                    {text.map((elem) => (
+                        <DropdownList open={isOpen}>{elem}</DropdownList>
+                    ))}
+                </ul> :
+                <DropdownText open={isOpen}>{text}</DropdownText> }
             </DropdownTextBackground>
         </>
     );

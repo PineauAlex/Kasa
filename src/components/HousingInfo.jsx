@@ -1,22 +1,23 @@
 import styled from 'styled-components';
 
-const HousingInfoTitle = styled.h3`
+const HousingInfoTitle = styled.h2`
     color: #FF6060;
     font-size: 20px;
-    font-weight: normal;
+    font-weight: 500;
 `
 
-const HousingInfoLieu = styled.p`
+const HousingInfoLieu = styled.h3`
     color: #FF6060;
     font-size: 16px;
+    font-weight: 500;
 `
 
 
-function HousingInfo() {
+function HousingInfo({ title, location }) {
     return (
         <>
-            <HousingInfoTitle>Titre</HousingInfoTitle>
-            <HousingInfoLieu>Ville, Pays</HousingInfoLieu>
+            <HousingInfoTitle>{title}</HousingInfoTitle>
+            <HousingInfoLieu>{location}</HousingInfoLieu>
         </>
     );
 }

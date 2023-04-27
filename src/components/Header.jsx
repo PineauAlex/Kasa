@@ -20,6 +20,11 @@ const HeaderLinks = styled(Link)`
     font-size: 12px;
     padding-left: 20px;
     color: #FF6060;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 `
 
 function Header() {

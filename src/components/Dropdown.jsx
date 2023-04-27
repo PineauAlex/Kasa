@@ -39,6 +39,7 @@ const DropdownTextBackground = styled.div`
     ul {
         margin: 0;
         padding: ${props => props.open ? "35px" : "0"} 10px 0 10px;
+        list-style-type: none;
         transition: all 0.5s ease-out;
     }
 `

@@ -31,10 +31,10 @@ const CardShadow = styled.div`
 
 const CardText = styled.h3`
     position: absolute;
-    left: 5%;
-    right: 5%;
+    left: 20px;
+    right: 20px;
     top: 85%;
-    bottom: 5%;
+    bottom: 20px;
     font-weight: normal;
     font-size: 18px;
     line-height: 142.6%;

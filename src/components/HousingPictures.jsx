@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { useState } from 'react';
 
 import Arrow from '../assets/arrow.png';
-import ImgBackground from '../assets/homePicture.jpg';
 
 const HousingPictureMain = styled.div`
     position: relative;
@@ -44,20 +43,27 @@ const HousingPictureArrowRight = styled.img`
 
 function HousingPictures({ pictures }) {
 
+    const pictureNumber = (pictures.length - 1);
     const [currentImage, setCurrentImage] = useState(0);
 
     function previousImg(event) {
         event.preventDefault();
-        setCurrentImage(currentImage--);
+        setCurrentImage(currentImage - 1);
+        if (currentImage <= 0) {
+            setCurrentImage(pictureNumber);
+        }
     }
     function nextImg(event) {
         event.preventDefault();
-        setCurrentImage(currentImage++);
+        setCurrentImage(currentImage + 1);
+        if (currentImage >= pictureNumber) {
+            setCurrentImage(0);
+        }
     }
 
     return (
         <HousingPictureMain>
-            <HousingPictureImg src={ImgBackground} />
+            <HousingPictureImg src={pictures[currentImage]} />
             <HousingPictureSelect>
                 <HousingPictureArrowLeft src={Arrow} onClick={previousImg} />
                 <HousingPictureArrowRight src={Arrow} onClick={nextImg} />

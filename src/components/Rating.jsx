@@ -1,28 +1,34 @@
 import styled from 'styled-components';
+import { FaStar } from "react-icons/fa";
 
-const TagBackground = styled.div`
-    min-width: 84px;
-    width: 84px;
-    height: 18px;
-
-    background: #FF6060;
-    border-radius: 10px;
+const RatingDisplay = styled.div`
+    display: flex;
+    justify-content: left;
 `
 
-const TagText = styled.h3`
-    text-align: center;
-    
-    font-weight: 500;
-    font-size: 10px;
+const StarIcon = styled(FaStar)`
+    width: 17px;
+    height: 17px;
+    padding-right: 10px;
 
-    color: #FFFFFF;
+    &.on {
+        color: #FF6060;
+    }
+    &.off {
+        color: #E3E3E3;
+    }
 `
 
 
 function Rating({ stars }) {
     return (
-        <>
-        </>
+        <RatingDisplay>
+            <StarIcon className='on' />
+            <StarIcon className='on' />
+            <StarIcon className='on' />
+            <StarIcon className='off' />
+            <StarIcon className='off' />
+        </RatingDisplay>
     );
 }
 

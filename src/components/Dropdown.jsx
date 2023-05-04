@@ -83,7 +83,7 @@ function Dropdown({ title, text }) {
                 { Array.isArray(text) ?
                 <ul>
                     {text.map((elem) => (
-                        <DropdownList open={isOpen}>{elem}</DropdownList>
+                        <DropdownList key={elem} open={isOpen}>{elem}</DropdownList>
                     ))}
                 </ul> :
                 <DropdownText open={isOpen}>{text}</DropdownText> }

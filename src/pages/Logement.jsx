@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import BodyContent from '../components/BodyContent';
 import LineBlock from '../components/LineBlock';
 
 import HousingPictures from '../components/HousingPictures';
@@ -24,7 +25,7 @@ function Logement() {
   });
 
   return (<>
-    <div className='body-content'>
+    <BodyContent>
       <Header />
       <HousingPictures pictures={selectedLoge.pictures} />
       <HousingInfo title={selectedLoge.title} location={selectedLoge.location} />
@@ -35,7 +36,7 @@ function Logement() {
       </LineBlock>
       <Dropdown title="Description" text={selectedLoge.description} />
       <Dropdown title="Équipements" text={selectedLoge.equipments} />
-    </div>
+    </BodyContent>
     <Footer />
   </>);
 }

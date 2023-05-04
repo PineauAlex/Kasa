@@ -21,23 +21,15 @@ const StarIcon = styled(FaStar)`
 
 
 function Rating({ stars }) {
+    const range = [1, 2, 3, 4, 5];
+
     return (
         <RatingDisplay>
-            <StarIcon className='on' />
-            <StarIcon className='on' />
-            <StarIcon className='on' />
-            <StarIcon className='on' />
-            <StarIcon className='on' />
-            {/*
-            for (let i = 1; i <= 5; i++) {
-                if (i <= stars) {
-                    <StarIcon className='on' />
-                }
-                else {
-                    <StarIcon className='off' />
-                }
-            }
-            */}
+            {range.map((rangeElem) =>
+                rangeElem <= stars
+                ? <StarIcon key={rangeElem} className='on' /> 
+                : <StarIcon key={rangeElem} className='off' />
+            )}
         </RatingDisplay>
     );
 }

@@ -15,7 +15,7 @@ const TagText = styled.h3`
     text-align: center;
     font-weight: 500;
     font-size: 10px;
-    margin: 0;
+    margin: 0 5px;
     align-self: center;
 
     color: #FFFFFF;

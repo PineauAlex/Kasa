@@ -21,6 +21,9 @@ const HeaderLinks = styled(Link)`
     padding-left: 20px;
     color: #FF6060;
     text-decoration: none;
+    @media (min-width: 992px) {
+        text-transform: uppercase;
+    }
 
     &:hover {
         text-decoration: underline;
@@ -32,8 +35,8 @@ function Header() {
         <HeaderMain>
             <HeaderLogo src={Logo}></HeaderLogo>
             <div>
-                <HeaderLinks to="/">ACCUEIL</HeaderLinks>
-                <HeaderLinks to="/about">A PROPOS</HeaderLinks>
+                <HeaderLinks to="/">Accueil</HeaderLinks>
+                <HeaderLinks to="/about">A Propos</HeaderLinks>
             </div>
         </HeaderMain>
     );

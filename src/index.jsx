@@ -9,6 +9,12 @@ import About from './pages/About';
 import Logement from './pages/Logement';
 import ErrorPage from './pages/Error';
 
+const breakpoints = {
+  mobile: "(max-width: 767px)",
+  tablet: "(max-width: 991px) and (min-width: 768px)",
+  desktop: "(min-width: 992px)",
+}
+
 const router = createBrowserRouter([
   {
     path: "/",

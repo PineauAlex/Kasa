@@ -13,7 +13,7 @@ function TagContent({ tags }) {
     return (
         <TagsBody>
             {tags.map((tag) => (
-                <Tag tagName={tag} />
+                <Tag key={tag} tagName={tag} />
             ))}
         </TagsBody>
     );

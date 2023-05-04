@@ -12,7 +12,12 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .body-content {
-        padding: 20px;
+        @media (max-width: 991px) {
+            padding: 20px;
+        }
+        @media (min-width: 992px) {
+            padding: 20px 100px;
+        }
     }
 `
 

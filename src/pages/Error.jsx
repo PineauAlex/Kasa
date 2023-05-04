@@ -1,14 +1,15 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import BodyContent from '../components/BodyContent';
 
 import ErrorMessage from '../components/ErrorMessage';
 
 function Error() {
   return (<>
-    <div className='body-content'>
+    <BodyContent>
       <Header />
       <ErrorMessage />
-    </div>
+    </BodyContent>
     <Footer />
   </>);
 }

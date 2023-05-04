@@ -7,8 +7,8 @@ const RatingDisplay = styled.div`
 `
 
 const StarIcon = styled(FaStar)`
-    width: 17px;
-    height: 17px;
+    width: 18px;
+    height: 18px;
     padding-right: 10px;
 
     &.on {
@@ -26,8 +26,18 @@ function Rating({ stars }) {
             <StarIcon className='on' />
             <StarIcon className='on' />
             <StarIcon className='on' />
-            <StarIcon className='off' />
-            <StarIcon className='off' />
+            <StarIcon className='on' />
+            <StarIcon className='on' />
+            {/*
+            for (let i = 1; i <= 5; i++) {
+                if (i <= stars) {
+                    <StarIcon className='on' />
+                }
+                else {
+                    <StarIcon className='off' />
+                }
+            }
+            */}
         </RatingDisplay>
     );
 }

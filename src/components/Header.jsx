@@ -21,7 +21,7 @@ const HeaderLinks = styled(Link)`
     padding-left: 20px;
     color: #FF6060;
     text-decoration: none;
-    @media (min-width: 992px) {
+    @media (max-width: 767px) {
         text-transform: uppercase;
     }
 

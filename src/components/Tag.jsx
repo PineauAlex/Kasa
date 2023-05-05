@@ -14,7 +14,7 @@ const TagBackground = styled.div`
 const TagText = styled.h3`
     text-align: center;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 11px;
     margin: 0 5px;
     align-self: center;
 

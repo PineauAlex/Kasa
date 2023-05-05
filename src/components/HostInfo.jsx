@@ -4,6 +4,7 @@ const InfoDisplay = styled.div`
     display: flex;
     justify-content: right;
     align-items: center;
+    max-width: 140px;
 `
 
 const ProfilePicture = styled.img`
@@ -15,10 +16,9 @@ const ProfilePicture = styled.img`
 `
 
 const HostName = styled.p`
-    font-size: 14px;
+    font-size: 16px;
     color: #FF6060;
     text-align: right;
-    word-spacing: 99999px;
 `
 
 
@@ -26,7 +26,7 @@ function HostInfo({ name, picture }) {
     return (
         <InfoDisplay>
             <HostName>{name}</HostName>
-            <ProfilePicture src={picture} />
+            <ProfilePicture src={picture} alt="Photo de l'utilisateur" />
         </InfoDisplay>
     );
 }

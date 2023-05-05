@@ -11,9 +11,9 @@ const PaddingBody = styled.div`
 
 
 function BodyContent( {children} ) {
-    return (<>
+    return (
         <PaddingBody>{children}</PaddingBody>
-    </>);
+    );
 }
-  
+
 export default BodyContent;

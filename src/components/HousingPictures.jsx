@@ -63,7 +63,7 @@ function HousingPictures({ pictures }) {
 
     return (
         <HousingPictureMain>
-            <HousingPictureImg src={pictures[currentImage]} />
+            <HousingPictureImg src={pictures[currentImage]} alt="Image de l'appartement" />
             <HousingPictureSelect>
                 <HousingPictureArrowLeft src={Arrow} onClick={previousImg} />
                 <HousingPictureArrowRight src={Arrow} onClick={nextImg} />

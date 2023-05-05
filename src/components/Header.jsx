@@ -33,7 +33,7 @@ const HeaderLinks = styled(Link)`
 function Header() {
     return (
         <HeaderMain>
-            <HeaderLogo src={Logo}></HeaderLogo>
+            <HeaderLogo src={Logo} alt='Logo de Kasa'></HeaderLogo>
             <div>
                 <HeaderLinks to="/">Accueil</HeaderLinks>
                 <HeaderLinks to="/about">A Propos</HeaderLinks>

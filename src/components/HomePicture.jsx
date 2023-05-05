@@ -46,7 +46,7 @@ const HomePictureText = styled.h2`
 function HomePicture() {
     return (
         <HomePictureMain>
-            <HomePictureImg src={ImgBackground} />
+            <HomePictureImg src={ImgBackground} alt="Image d'un paysage" />
             <HomePictureEffect />
             <HomePictureText>Chez vous, partout et ailleurs</HomePictureText>
         </HomePictureMain>

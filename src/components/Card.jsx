@@ -45,13 +45,11 @@ const CardText = styled.h3`
 
 function Card({ title, image }) {
     return (
-        <>
-            <CardMain>
-                <CardImage src={image} />
-                <CardShadow />
-                <CardText>{title}</CardText>
-            </CardMain>
-        </>
+        <CardMain>
+            <CardImage src={image} alt="Image de l'appartement" />
+            <CardShadow />
+            <CardText>{title}</CardText>
+        </CardMain>
     );
 }
 

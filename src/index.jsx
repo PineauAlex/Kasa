@@ -6,14 +6,8 @@ import GlobalStyle from './components/GlobalStyle';
 
 import Home from './pages/Home';
 import About from './pages/About';
-import Logement from './pages/Logement';
+import Housing from './pages/Housing';
 import ErrorPage from './pages/Error';
-
-const breakpoints = {
-  mobile: "(max-width: 767px)",
-  tablet: "(max-width: 991px) and (min-width: 768px)",
-  desktop: "(min-width: 992px)",
-}
 
 const router = createBrowserRouter([
   {
@@ -27,7 +21,7 @@ const router = createBrowserRouter([
   },
   {
     path: "logement/:logementId",
-    element: <Logement />,
+    element: <Housing />,
   },
 ]);
 

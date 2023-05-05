@@ -29,7 +29,7 @@ const FooterText = styled.p`
 function Footer() {
     return (
         <FooterBackground>
-            <FooterLogo src={Logo} />
+            <FooterLogo src={Logo} alt='Logo de Kasa' />
             <FooterText>© 2020 Kasa. All rights reserved</FooterText>
         </FooterBackground>
     );

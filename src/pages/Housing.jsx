@@ -4,19 +4,15 @@ import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BodyContent from '../components/BodyContent';
-import LineBlock from '../components/LineBlock';
 
 import HousingPictures from '../components/HousingPictures';
-import HousingInfo from '../components/HousingInfo';
-import TagContent from '../components/TagContent';
-import Rating from '../components/Rating';
-import HostInfo from '../components/HostInfo';
+import HousingBody from '../components/HousingBody';
 import Dropdown from '../components/Dropdown';
 
 const logementsList = require('../datas/logements.json');
 
-function Logement() {
-  const [selectedLoge, setSelectedLoge] = useState({tags:[],equipments:[],host:{},pictures:[]});
+function Housing() {
+  const [selectedLoge, setSelectedLoge] = useState({equipments:[],pictures:[]});
 
   let { logementId } = useParams();
   useEffect(() => {
@@ -28,12 +24,7 @@ function Logement() {
     <BodyContent>
       <Header />
       <HousingPictures pictures={selectedLoge.pictures} />
-      <HousingInfo title={selectedLoge.title} location={selectedLoge.location} />
-      <TagContent tags={selectedLoge.tags} />
-      <LineBlock>
-        <Rating stars={selectedLoge.rating} />
-        <HostInfo name={selectedLoge.host.name} picture={selectedLoge.host.picture} />
-      </LineBlock>
+      <HousingBody />
       <Dropdown title="Description" text={selectedLoge.description} />
       <Dropdown title="Équipements" text={selectedLoge.equipments} />
     </BodyContent>
@@ -41,4 +32,4 @@ function Logement() {
   </>);
 }
 
-export default Logement;
+export default Housing;

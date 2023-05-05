@@ -1,26 +1,33 @@
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
-const HousingInfoTitle = styled.h2`
-    color: #FF6060;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-`
+import HousingLocation from '../components/HousingLocation';
+import TagContent from '../components/TagContent';
 
-const HousingInfoLieu = styled.h3`
-    color: #FF6060;
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 0;
+const logementsList = require('../datas/logements.json');
+
+
+const HousingInfoMain = styled.div`
+    display: flex;
+    flex-direction: column;
 `
 
 
-function HousingInfo({ title, location }) {
+function HousingInfo() {
+    const [selectedLoge, setSelectedLoge] = useState({tags:[]});
+
+    let { logementId } = useParams();
+    useEffect(() => {
+        const logement = logementsList.find(loge => loge.id === logementId);
+        setSelectedLoge(logement);
+    });
+
     return (
-        <>
-            <HousingInfoTitle>{title}</HousingInfoTitle>
-            <HousingInfoLieu>{location}</HousingInfoLieu>
-        </>
+        <HousingInfoMain>
+            <HousingLocation title={selectedLoge.title} location={selectedLoge.location} />
+            <TagContent tags={selectedLoge.tags} />
+        </HousingInfoMain>
     );
 }
 

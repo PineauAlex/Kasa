@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 
 const RatingDisplay = styled.div`
     display: flex;
-    justify-content: left;
+    justify-content: flex-end;
 `
 
 const StarIcon = styled(FaStar)`

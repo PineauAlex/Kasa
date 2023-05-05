@@ -36,7 +36,7 @@ const AboutPictureEffect = styled.div`
 function AboutPicture() {
     return (
         <AboutPictureMain>
-            <AboutPictureImg src={ImgBackground} />
+            <AboutPictureImg src={ImgBackground} alt="Image d'un paysage" />
             <AboutPictureEffect />
         </AboutPictureMain>
     );

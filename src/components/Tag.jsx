@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const TagBackground = styled.div`
     min-width: 84px;
-    height: 18px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -14,7 +14,7 @@ const TagBackground = styled.div`
 const TagText = styled.h3`
     text-align: center;
     font-weight: 500;
-    font-size: 10px;
+    font-size: 12px;
     margin: 0 5px;
     align-self: center;
 

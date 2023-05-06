@@ -17,7 +17,7 @@ const DropdownHead = styled.div`
 `
 
 const DropdownHeadTitle = styled.h3`
-    font-size: 13px;
+    font-size: 14px;
     font-weight: normal;
     line-height: 142.6%;
     padding-left: 10px;
@@ -45,7 +45,7 @@ const DropdownTextBackground = styled.div`
 `
 
 const DropdownText = styled.p`
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     margin: 0;
     padding: ${props => props.open ? "35px" : "0"} 10px 0 10px;
@@ -55,7 +55,7 @@ const DropdownText = styled.p`
 `
 
 const DropdownList = styled.li`
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     margin: 0;
     color: #FF6060;

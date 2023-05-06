@@ -8,6 +8,11 @@ const CardMain = styled.div`
     background: #FF6060;
     border-radius: 10px;
     margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+        width: 255px;
+        margin: 20px;
+    }
 `
 
 const CardImage = styled.img`

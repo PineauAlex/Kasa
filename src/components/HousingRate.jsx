@@ -12,11 +12,9 @@ const HousingRateMain = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    @media (max-width: 991px) {
-        flex-direction: row;
-    }
-    @media (min-width: 992px) {
+    flex-direction: row;
+
+    @media (min-width: 768px) {
         flex-direction: column-reverse;
         justify-content: flex-end;
         align-content: flex-end;

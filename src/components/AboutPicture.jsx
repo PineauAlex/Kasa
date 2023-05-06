@@ -8,19 +8,24 @@ const AboutPictureMain = styled.div`
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-
     width: auto;
     height: 223px;
     margin: 20px 0;
     border-radius: 10px;
-
     overflow: hidden;
+
+    @media (min-width: 992px) {
+        height: 150px;
+    }
 `
 const AboutPictureImg = styled.img`
     width: 100%;
     height: 223px;
-
     object-fit: cover;
+
+    @media (min-width: 992px) {
+        height: 150px;
+    }
 `
 
 const AboutPictureEffect = styled.div`
@@ -31,6 +36,10 @@ const AboutPictureEffect = styled.div`
     left: 0;
     background-color: black;
     opacity: 0.3;
+
+    @media (min-width: 992px) {
+        height: 150px;
+    }
 `
 
 function AboutPicture() {

@@ -3,18 +3,14 @@ import Footer from '../components/Footer';
 import BodyContent from '../components/BodyContent';
 
 import AboutPicture from '../components/AboutPicture';
-import Dropdown from '../components/Dropdown';
-
-const aboutList = require('../datas/about.json');
+import AboutBody from '../components/AboutBody';
 
 function About() {
   return (<>
     <BodyContent>
       <Header />
       <AboutPicture />
-      {aboutList.map((aboutCat) => (
-        <Dropdown key={aboutCat.id} title={aboutCat.title} text={aboutCat.text} />
-      ))}
+      <AboutBody />
     </BodyContent>
     <Footer />
   </>);

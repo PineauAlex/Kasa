@@ -11,16 +11,32 @@ const ErrorCode = styled.h2`
     font-weight: bold;
     margin-top: 200px;
     margin-bottom: 0;
+
+    @media (min-width: 992px) {
+        font-size: 152px;
+    }
 `
 
 const ErrorText = styled.p`
     font-size: 18px;
     margin-top: 0;
     margin-bottom: 100px;
+
+    @media (min-width: 992px) {
+        font-size: 24px;
+    }
 `
 
 const ErrorLink = styled(Link)`
     font-size: 12px;
+
+    &:visited {
+        color: #FF6060;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 16px;
+    }
 `
 
 function ErrorMessage() {

@@ -7,12 +7,12 @@ import BodyContent from '../components/BodyContent';
 
 import HousingPictures from '../components/HousingPictures';
 import HousingBody from '../components/HousingBody';
-import Dropdown from '../components/Dropdown';
+import HousingDescription from '../components/HousingDescription';
 
 const logementsList = require('../datas/logements.json');
 
 function Housing() {
-  const [selectedLoge, setSelectedLoge] = useState({equipments:[],pictures:[]});
+  const [selectedLoge, setSelectedLoge] = useState({pictures:[]});
 
   let { logementId } = useParams();
   useEffect(() => {
@@ -25,8 +25,7 @@ function Housing() {
       <Header />
       <HousingPictures pictures={selectedLoge.pictures} />
       <HousingBody />
-      <Dropdown title="Description" text={selectedLoge.description} />
-      <Dropdown title="Équipements" text={selectedLoge.equipments} />
+      <HousingDescription />
     </BodyContent>
     <Footer />
   </>);

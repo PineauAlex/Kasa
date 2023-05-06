@@ -3,18 +3,14 @@ import Footer from '../components/Footer';
 import BodyContent from '../components/BodyContent';
 
 import HomePicture from '../components/HomePicture';
-import Card from '../components/Card';
-
-const logementsList = require('../datas/logements.json');
+import HomeBody from '../components/HomeBody';
 
 function Home() {
   return (<>
     <BodyContent>
       <Header />
       <HomePicture />
-      {logementsList.map((logement) => (
-        <Card key={logement.id} title={logement.title} image={logement.cover} />
-      ))}
+      <HomeBody />
     </BodyContent>
     <Footer />
   </>);

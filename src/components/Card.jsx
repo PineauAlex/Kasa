@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const CardMain = styled.div`
+const CardMain = styled(Link)`
     position: relative;
     display: flex;
     width: auto;
@@ -32,6 +33,10 @@ const CardShadow = styled.div`
     bottom: 0%;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     border-radius: 10px;
+
+    &:hover {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(50, 50, 50, 0.5) 100%);
+    }
 `
 
 const CardText = styled.h3`
@@ -48,9 +53,9 @@ const CardText = styled.h3`
     color: white;
 `
 
-function Card({ title, image }) {
+function Card({ id, title, image }) {
     return (
-        <CardMain>
+        <CardMain to={"/logement/" + id}>
             <CardImage src={image} alt="Image de l'appartement" />
             <CardShadow />
             <CardText>{title}</CardText>

@@ -10,7 +10,6 @@ const HousingBodyMain = styled.div`
     @media (min-width: 992px) {
         display: grid;
         grid-template-columns: 2fr 2fr;
-        grid-row: auto auto;
         grid-gap: 50px;
     }
 `

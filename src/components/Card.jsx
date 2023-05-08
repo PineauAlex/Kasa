@@ -14,6 +14,10 @@ const CardMain = styled(Link)`
         width: 255px;
         margin: 20px;
     }
+
+    &:hover > .pictureShadow {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(50, 50, 50, 0.5) 100%);
+    }
 `
 
 const CardImage = styled.img`
@@ -33,10 +37,6 @@ const CardShadow = styled.div`
     bottom: 0%;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     border-radius: 10px;
-
-    &:hover {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(50, 50, 50, 0.5) 100%);
-    }
 `
 
 const CardText = styled.h3`
@@ -57,7 +57,7 @@ function Card({ id, title, image }) {
     return (
         <CardMain to={"/logement/" + id}>
             <CardImage src={image} alt="Image de l'appartement" />
-            <CardShadow />
+            <CardShadow className='pictureShadow' />
             <CardText>{title}</CardText>
         </CardMain>
     );

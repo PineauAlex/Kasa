@@ -6,12 +6,12 @@ import Dropdown from '../components/Dropdown';
 
 const logementsList = require('../datas/logements.json');
 
-const HousingBodyMain = styled.div`
-    display: flex;
-    flex-direction: column;
-    
+const HousingBodyMain = styled.div`    
     @media (min-width: 992px) {
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-row: auto auto;
+        grid-gap: 50px;
     }
 `
 

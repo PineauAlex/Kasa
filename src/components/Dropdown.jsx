@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 import Arrow from '../assets/arrow.png';
 
+const DropdownMain = styled.div`
+`
+
 const DropdownHead = styled.div`
     width: auto;
     height: 30px;
@@ -75,7 +78,7 @@ function Dropdown({ title, text }) {
     }
 
     return (
-        <>
+        <DropdownMain>
             <DropdownHead onClick={handleClick}>
                 <DropdownHeadTitle>{title}</DropdownHeadTitle>
                 <DropdownHeadArrow src={Arrow} open={isOpen} />
@@ -89,7 +92,7 @@ function Dropdown({ title, text }) {
                 </ul> :
                 <DropdownText open={isOpen}>{text}</DropdownText> }
             </DropdownTextBackground>
-        </>
+        </DropdownMain>
     );
 }
 

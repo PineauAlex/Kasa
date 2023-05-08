@@ -8,7 +8,6 @@ const HeaderMain = styled.div`
     justify-content: space-between;
     align-items: center;
     width: auto;
-    height: 47px;
     background-color: white;
 `
 

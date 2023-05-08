@@ -10,7 +10,6 @@ const FooterBackground = styled.div`
     align-content: center;
     justify-content: center;
     width: 100%;
-    height: 209px;
     background: black;
     margin-top: 50px;
 `
@@ -18,12 +17,14 @@ const FooterBackground = styled.div`
 const FooterLogo = styled.img`
     width: 122px;
     padding-bottom: 5px;
+    padding-top: 50px;
 `
 
 const FooterText = styled.p`
     font-size: 12px;
     color: white;
     padding-top: 5px;
+    padding-bottom: 25px;
 
     @media (min-width: 768px) {
         font-size: 18px;

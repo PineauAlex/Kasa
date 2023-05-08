@@ -55,7 +55,12 @@ const HousingPictureText = styled.p`
     text-align: center;
     margin-top: 220px;
     width: 100%;
-    color: white;
+    color: white;    
+    visibility: hidden;
+
+    @media (min-width: 992px) {
+        visibility: visible;
+    }
 `
 
 function HousingPictures({ pictures }) {

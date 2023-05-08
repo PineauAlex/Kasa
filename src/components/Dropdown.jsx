@@ -33,22 +33,23 @@ const DropdownHeadArrow = styled.img`
 const DropdownTextBackground = styled.div`
     background: #F6F6F6;
     border-radius: 10px;
-    ${props => props.open ? "margin-top: -20px; height: 140px;" : "margin-top: 0; height: 0;"}
+    ${props => props.open ? "margin-top: -20px; height: 100%;" : "margin-top: 0; height: 0;"}
     transition: all 0.5s ease-out;
 
     ul {
         margin: 0;
-        padding: ${props => props.open ? "35px" : "0"} 10px 0 10px;
+        padding: ${props => props.open ? "35px" : "0"} 10px 10px 10px;
         list-style-type: none;
         transition: all 0.5s ease-out;
     }
 `
+// 140px
 
 const DropdownText = styled.p`
     font-size: 14px;
     font-weight: 300;
     margin: 0;
-    padding: ${props => props.open ? "35px" : "0"} 10px 0 10px;
+    padding: ${props => props.open ? "35px" : "0"} 10px 10px 10px;
     color: #FF6060;
     ${props => props.open ? "opacity: 1;" : "opacity: 0;"}
     transition: all 0.5s ease-out;

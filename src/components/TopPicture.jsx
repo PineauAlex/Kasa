@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-import ImgBackground from '../assets/homePicture.jpg';
-
-const HomePictureMain = styled.div`
+const TopPictureMain = styled.div`
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -18,7 +16,7 @@ const HomePictureMain = styled.div`
         height: 160px;
     }
 `
-const HomePictureImg = styled.img`
+const TopPictureImg = styled.img`
     width: 100%;
     height: 111px;
     object-fit: cover;
@@ -28,7 +26,7 @@ const HomePictureImg = styled.img`
     }
 `
 
-const HomePictureEffect = styled.div`
+const TopPictureEffect = styled.div`
     position: absolute;
     width: 100%;
     height: 111px;
@@ -42,7 +40,7 @@ const HomePictureEffect = styled.div`
     }
 `
 
-const HomePictureText = styled.h2`
+const TopPictureText = styled.h2`
     position: absolute;
     z-index: 10;
     max-width: 217px;
@@ -58,14 +56,14 @@ const HomePictureText = styled.h2`
     }
 `
 
-function HomePicture() {
+function TopPicture({ text, image }) {
     return (
-        <HomePictureMain>
-            <HomePictureImg src={ImgBackground} alt="Image d'un paysage" />
-            <HomePictureEffect />
-            <HomePictureText>Chez vous, partout et ailleurs</HomePictureText>
-        </HomePictureMain>
+        <TopPictureMain>
+            <TopPictureImg src={image} alt="Image d'un paysage" />
+            <TopPictureEffect />
+            <TopPictureText>{text}</TopPictureText>
+        </TopPictureMain>
     );
 }
 
-export default HomePicture;
+export default TopPicture;

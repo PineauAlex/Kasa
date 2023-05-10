@@ -29,7 +29,7 @@ const HeaderLinks = styled(NavLink)`
         padding-left: 50px;
     }
 
-    .currentPage {
+    &.active {
         text-decoration: underline;
     }
 `

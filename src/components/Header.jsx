@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Logo from '../assets/logo_orange.png';
@@ -15,7 +15,7 @@ const HeaderLogo = styled.img`
     width: 145px;
 `
 
-const HeaderLinks = styled(Link)`
+const HeaderLinks = styled(NavLink)`
     text-transform: uppercase;
     font-size: 12px;
     padding-left: 20px;
@@ -29,7 +29,7 @@ const HeaderLinks = styled(Link)`
         padding-left: 50px;
     }
 
-    &:hover {
+    .currentPage {
         text-decoration: underline;
     }
 `

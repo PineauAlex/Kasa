@@ -86,11 +86,16 @@ function HousingPictures({ pictures }) {
     return (
         <HousingPictureMain>
             <HousingPictureImg src={pictures[currentImage]} alt="Image de l'appartement" />
-            <HousingPictureSelect>
-                <HousingPictureArrowLeft src={Arrow} onClick={previousImg} />
-                <HousingPictureArrowRight src={Arrow} onClick={nextImg} />
-            </HousingPictureSelect>
-            <HousingPictureText>{currentImage + 1}/{totalPictures + 1}</HousingPictureText>
+            { totalPictures === 0
+                ? null
+                : <>
+                    <HousingPictureSelect>
+                        <HousingPictureArrowLeft src={Arrow} onClick={previousImg} />
+                        <HousingPictureArrowRight src={Arrow} onClick={nextImg} />
+                    </HousingPictureSelect>
+                    <HousingPictureText>{currentImage + 1}/{totalPictures + 1}</HousingPictureText>
+                </>
+            }
         </HousingPictureMain>
     );
 }
